@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes por el Mundo - Descubre Destinos Fascinantes</title>
+    <meta name="description"
+        content="Explora los destinos más fascinantes del mundo. Guías de viaje, alojamientos y experiencias únicas.">
+    <link rel="stylesheet" href="assets/styles/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <include src="views/navigation.html"></include>
+
+
+    <!-- Page header-->
+    <header class="page-header">
+        <div class="container">
+            <h1>Descubre el Mundo</h1>
+            <p>Explora destinos fascinantes, descubre culturas únicas y vive experiencias inolvidables alrededor
+                del planeta</p>
+            <button id="btn-planifica" class="btn btn-secondary">Planifica tu viaje</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="container">
+                <h2>¿Por qué viajar con nosotros?</h2>
+                <div class="grid grid-3">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <h3>Destinos Únicos</h3>
+                        <p>Descubre lugares extraordinarios en cada rincón del mundo</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                                <circle cx="12" cy="13" r="3" />
+                            </svg>
+                        </div>
+                        <h3>Experiencias Auténticas</h3>
+                        <p>Vive como un local y conoce la verdadera esencia de cada lugar</p>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                            </svg>
+                        </div>
+                        <h3>Viajes Memorables</h3>
+                        <p>Crea recuerdos que durarán toda la vida</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinations Preview -->
+        <section class="section section-gray">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Destinos Destacados</h2>
+                    <p>Desde playas paradisíacas hasta ciudades históricas, encuentra el destino
+                        perfecto para tu próxima aventura</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <img src="./assets/images/santorini.jpeg" alt="Santorini" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Santorini, Grecia</h3>
+                            <p class="card-description">Descubre las icónicas casas blancas y cúpulas azules frente al
+                                Mar
+                                Egeo</p>
+                            <a href="categoria.html" class="text-primary">Ver más →</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/kyoto.jpeg" alt="Kyoto" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Kyoto, Japón</h3>
+                            <p class="card-description">Templos milenarios, jardines zen y la auténtica cultura japonesa
+                            </p>
+                            <a href="categoria.html" class="text-primary">Ver más →</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/images/patagonia.jpeg" alt="Patagonia" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Patagonia, Argentina</h3>
+                            <p class="card-description">Naturaleza salvaje, glaciares imponentes y paisajes de ensueño
+                            </p>
+                            <a href="categoria.html" class="text-primary">Ver más →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="categories">
+                    <a href="categoria.html" class="btn btn-primary">Ver Todos los Destinos</a>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="modal-simple" class="modal-hidden">
+            <div class="modal-box">
+                <p>Esta funcionalidad está en construcción. Muy pronto estará disponible.</p>
+                <button id="modal-close" class="btn btn-primary">Cerrar</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <include src="views/footer.html"></include>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

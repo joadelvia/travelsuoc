@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos por el Mundo - Viajes por el Mundo</title>
+    <meta name="description" content="Explora nuestra selección de destinos fascinantes alrededor del mundo.">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <include src="views/navigation.html"></include>
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1>Destinos por el Mundo</h1>
+            <p>Explora nuestra selección de destinos fascinantes. Cada uno con su propia magia, cultura y experiencias
+                únicas que te esperan.</p>
+        </div>
+    </header>
+    <main>
+
+        <!-- Destinations Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-3">
+                    <!-- Santorini - enlaza a /det1 -->
+                    <div class="card">
+                        <div style="position: relative;">
+                            <img src="./assets/images/santorini.jpeg" alt="Santorini" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Santorini, Grecia</h3>
+                            <p class="card-description">La joya del Mar Egeo con sus icónicas casas blancas y
+                                atardeceres
+                                inolvidables</p>
+                            <a href="/det1" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+
+                    <!-- Kyoto - enlaza a /det2 -->
+                    <div class="card">
+                        <div style="position: relative;">
+                            <img src="./assets/images/kyoto.jpeg" alt="Kyoto" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Kyoto, Japón</h3>
+                            <p class="card-description">Ciudad milenaria con templos sagrados, jardines zen y
+                                tradiciones
+                                ancestrales</p>
+                            <a href="/det2" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+
+                    <!-- Bali -->
+                    <div class="card">
+                        <div style="position: relative;">
+                            <img src="./assets/images/bali.jpeg" alt="Bali" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Bali, Indonesia</h3>
+                            <p class="card-description">Isla paradisíaca con playas de ensueño, cultura única y
+                                espiritualidad</p>
+                            <button class="btn btn-disabled">Próximamente</button>
+                        </div>
+                    </div>
+
+                    <!-- Patagonia -->
+                    <div class="card">
+                        <div style="position: relative;">
+                            <img src="./assets/images/patagonia.jpeg" alt="Patagonia" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Patagonia, Argentina</h3>
+                            <p class="card-description">Naturaleza salvaje con glaciares imponentes y paisajes de otro
+                                mundo
+                            </p>
+                            <button class="btn btn-disabled">Próximamente</button>
+                        </div>
+                    </div>
+
+                    <!-- Machu Picchu -->
+                    <div class="card">
+                        <div style="position: relative;">
+                            <img src="./assets/images/machu_pichu.jpeg" alt="Machu Picchu" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Machu Picchu, Perú</h3>
+                            <p class="card-description">Ciudadela inca en las alturas de los Andes, maravilla del mundo
+                            </p>
+                            <button class="btn btn-disabled">Próximamente</button>
+                        </div>
+                    </div>
+
+                    <!-- Costa Tropical -->
+                    <div class="card">
+                        <div style="position: relative;">
+                            <img src="./assets/images/costa_tropical.jpeg" alt="Costa Tropical" class="card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Costa Tropical</h3>
+                            <p class="card-description">Playas paradisíacas con aguas cristalinas y arenas blancas</p>
+                            <button class="btn btn-disabled">Próximamente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <include src="views/footer.html"></include>
+</body>
+
+</html>
