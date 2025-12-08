@@ -494,3 +494,43 @@ footer {
 .modal-visible {
   display: flex;
 }
+
+
+/* 1. Animación SVG (Flotar) */
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.icono-animado {
+    /* Aplica la animación: nombre, duración, curva, infinito */
+    animation: flotar 3s ease-in-out infinite;
+    display: inline-block; /* Necesario para que transform funcione en algunos elementos */
+}
+
+/* 2. Clip-path (Recorte creativo) */
+.imagen-recortada {
+    /* Forma de heptágono (puedes cambiarlo en clippy) */
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    transition: clip-path 0.5s ease; /* Transición suave si cambia */
+}
+
+/* Efecto opcional: al pasar el ratón recupera la forma cuadrada */
+.imagen-recortada:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Ajuste para que las imágenes responsive no se rompan */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Accesibilidad: desactiva animaciones automáticamente si el usuario lo solicita en su SO */
+@media (prefers-reduced-motion: reduce) {
+    .icono-animado, .imagen-recortada, * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

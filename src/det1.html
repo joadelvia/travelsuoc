@@ -8,6 +8,7 @@
     <meta name="description"
         content="Descubre Santorini, la joya del Mar Egeo con sus icónicas casas blancas y atardeceres inolvidables.">
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -17,7 +18,12 @@
 
     <!-- Hero Image -->
     <header class="detail-hero">
-        <img src="assets/images/santorini.jpeg" alt="Santorini, Grecia">
+        <picture>
+            <source srcset="assets/images/santorini.jpeg?as=avif&width=1200" type="image/avif" media="(min-width: 768px)">
+            <source srcset="assets/images/santorini.jpeg?as=webp&width=1200" type="image/webp" media="(min-width: 768px)">
+            <source srcset="assets/images/santorini.jpeg?as=webp&width=600" type="image/webp" media="(max-width: 767px)">
+            <img src="assets/images/santorini.jpeg?width=1200" alt="Santorini, Grecia">
+        </picture>
         <div class="detail-hero-overlay">
             <div class="detail-hero-content">
                 <div class="container">
@@ -67,9 +73,27 @@
 
                     <!-- Image Gallery -->
                     <div class="image-gallery">
-                        <img src="assets/images/costa_tropical.jpeg" alt="Playas de Santorini">
-                        <img src="assets/images/gastronomia_griega.jpeg" alt="Gastronomía griega">
-                        <img src="assets/images/calles_santorini.jpeg" alt="Calles de Santorini">
+                        <img 
+                            src="assets/images/costa_tropical.jpeg?width=400" 
+                            srcset="assets/images/costa_tropical.jpeg?width=400 400w, assets/images/costa_tropical.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Playas de Santorini"
+                            loading="lazy"
+                        >
+                        <img 
+                            src="assets/images/gastronomia_griega.jpeg?width=400" 
+                            srcset="assets/images/gastronomia_griega.jpeg?width=400 400w, assets/images/gastronomia_griega.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Gastronomía griega"
+                            loading="lazy"
+                        >
+                        <img 
+                            src="assets/images/calles_santorini.jpeg?width=400" 
+                            srcset="assets/images/calles_santorini.jpeg?width=400 400w, assets/images/calles_santorini.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Calles de Santorini"
+                            loading="lazy"
+                        >
                     </div>
 
                     <h2>Vídeo: Qué ver y hacer en Santorini</h2>
@@ -127,21 +151,42 @@
                 <h2>Destinos Relacionados</h2>
                 <div class="grid grid-3">
                     <a href="/det2" class="card">
-                        <img src="assets/images/kyoto.jpeg" alt="Kyoto" class="card-image">
+                        <img 
+                            src="assets/images/kyoto.jpeg?width=400" 
+                            srcset="assets/images/kyoto.jpeg?width=400 400w, assets/images/kyoto.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Kyoto"
+                            loading="lazy"
+                            class="card-image"
+                        >
                         <div class="card-content">
                             <h3 class="card-title">Kyoto, Japón</h3>
                             <p class="card-description">Templos milenarios y cultura ancestral</p>
                         </div>
                     </a>
                     <a href="/categoria" class="card">
-                        <img src="assets/images/bali.jpeg" alt="Bali" class="card-image">
+                        <img 
+                            src="assets/images/bali.jpeg?width=400" 
+                            srcset="assets/images/bali.jpeg?width=400 400w, assets/images/bali.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Bali"
+                            loading="lazy"
+                            class="card-image"
+                        >
                         <div class="card-content">
                             <h3 class="card-title">Bali, Indonesia</h3>
                             <p class="card-description">Playas paradisíacas y espiritualidad</p>
                         </div>
                     </a>
                     <a href="/categoria" class="card">
-                        <img src="assets/images/machu_pichu.jpeg" alt="Machu Picchu" class="card-image">
+                        <img 
+                            src="assets/images/machu_pichu.jpeg?width=400" 
+                            srcset="assets/images/machu_pichu.jpeg?width=400 400w, assets/images/machu_pichu.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Machu Pichu"
+                            loading="lazy"
+                            class="card-image"
+                        >
                         <div class="card-content">
                             <h3 class="card-title">Machu Picchu, Perú</h3>
                             <p class="card-description">Maravilla del mundo en los Andes</p>

@@ -7,6 +7,7 @@
     <title>Destinos por el Mundo - Viajes por el Mundo</title>
     <meta name="description" content="Explora nuestra selección de destinos fascinantes alrededor del mundo.">
     <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -29,7 +30,16 @@
                     <!-- Santorini - enlaza a /det1 -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img src="./assets/images/santorini.jpeg" alt="Santorini" class="card-image">
+                            <img 
+                                src="./assets/images/santorini.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/santorini.jpeg?width=400 400w,
+                                    ./assets/images/santorini.jpeg?width=800 800w
+                            " 
+                            sizes="(max-width: 600px) 100vw, 33vw" 
+                            alt="Santorini" 
+                            class="card-image" 
+                            loading="lazy">
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Santorini, Grecia</h3>
@@ -43,7 +53,17 @@
                     <!-- Kyoto - enlaza a /det2 -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img src="./assets/images/kyoto.jpeg" alt="Kyoto" class="card-image">
+                            <img 
+                                src="./assets/images/kyoto.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/kyoto.jpeg?width=400 400w,
+                                    ./assets/images/kyoto.jpeg?width=800 800w
+                                "
+                                sizes="(max-width: 600px) 100vw, 33vw"
+                                alt="Kyoto" 
+                                class="card-image"
+                                loading="lazy"
+                            >
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Kyoto, Japón</h3>
@@ -57,7 +77,17 @@
                     <!-- Bali -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img src="./assets/images/bali.jpeg" alt="Bali" class="card-image">
+                            <img 
+                                src="./assets/images/bali.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/bali.jpeg?width=400 400w,
+                                    ./assets/images/bali.jpeg?width=800 800w
+                                "
+                                sizes="(max-width: 600px) 100vw, 33vw"
+                                alt="Bali" 
+                                class="card-image"
+                                loading="lazy"
+                            >
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Bali, Indonesia</h3>
@@ -70,7 +100,17 @@
                     <!-- Patagonia -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img src="./assets/images/patagonia.jpeg" alt="Patagonia" class="card-image">
+                            <img 
+                                src="./assets/images/patagonia.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/patagonia.jpeg?width=400 400w,
+                                    ./assets/images/patagonia.jpeg?width=800 800w
+                                "
+                                sizes="(max-width: 600px) 100vw, 33vw"
+                                alt="Patagonia" 
+                                class="card-image"
+                                loading="lazy"
+                            >
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Patagonia, Argentina</h3>
@@ -84,7 +124,17 @@
                     <!-- Machu Picchu -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img src="./assets/images/machu_pichu.jpeg" alt="Machu Picchu" class="card-image">
+                            <img 
+                                src="./assets/images/machu_pichu.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/machu_pichu.jpeg?width=400 400w,
+                                    ./assets/images/machu_pichu.jpeg?width=800 800w
+                                "
+                                sizes="(max-width: 600px) 100vw, 33vw"
+                                alt="Machu Pichu" 
+                                class="card-image"
+                                loading="lazy"
+                            >
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Machu Picchu, Perú</h3>
@@ -97,7 +147,17 @@
                     <!-- Costa Tropical -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img src="./assets/images/costa_tropical.jpeg" alt="Costa Tropical" class="card-image">
+                            <img 
+                                src="./assets/images/costa_tropical.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/costa_tropical.jpeg?width=400 400w,
+                                    ./assets/images/costa_tropical.jpeg?width=800 800w
+                                "
+                                sizes="(max-width: 600px) 100vw, 33vw"
+                                alt="Costa Tropical" 
+                                class="card-image"
+                                loading="lazy"
+                            >
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Costa Tropical</h3>

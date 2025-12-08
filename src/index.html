@@ -8,6 +8,7 @@
     <meta name="description"
         content="Explora los destinos más fascinantes del mundo. Guías de viaje, alojamientos y experiencias únicas.">
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
                 <div class="grid grid-3">
                     <div class="feature-box">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                            <svg class="icono-animado" role="img" aria-label="Icono posición mapa" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
                                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
@@ -46,7 +47,7 @@
                     </div>
                     <div class="feature-box">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                            <svg class="icono-animado" role="img" aria-label="Icono cámara" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
                                 <path
@@ -59,7 +60,7 @@
                     </div>
                     <div class="feature-box">
                         <div class="feature-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                            <svg role="img" aria-label="Icono corazón" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
                                 <path
@@ -83,7 +84,17 @@
                 </div>
                 <div class="grid grid-3">
                     <div class="card">
-                        <img src="./assets/images/santorini.jpeg" alt="Santorini" class="card-image">
+                        <img 
+                                src="./assets/images/santorini.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/santorini.jpeg?width=400 400w,
+                                    ./assets/images/santorini.jpeg?width=800 800w
+                                "
+                                sizes="(max-width: 600px) 100vw, 33vw"
+                                alt="Santorini" 
+                                class="card-image imagen-recortada"
+                                loading="lazy"
+                            >
                         <div class="card-content">
                             <h3 class="card-title">Santorini, Grecia</h3>
                             <p class="card-description">Descubre las icónicas casas blancas y cúpulas azules frente al
@@ -93,7 +104,17 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./assets/images/kyoto.jpeg" alt="Kyoto" class="card-image">
+                        <img 
+                                src="./assets/images/kyoto.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/kyoto.jpeg?width=400 400w,
+                                    ./assets/images/kyoto.jpeg?width=800 800w
+                                "
+                                sizes="(max-width: 600px) 100vw, 33vw"
+                                alt="Kyoto" 
+                                class="card-image imagen-recortada"
+                                loading="lazy"
+                            >
                         <div class="card-content">
                             <h3 class="card-title">Kyoto, Japón</h3>
                             <p class="card-description">Templos milenarios, jardines zen y la auténtica cultura japonesa
@@ -102,7 +123,17 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="./assets/images/patagonia.jpeg" alt="Patagonia" class="card-image">
+                        <img 
+                                src="./assets/images/patagonia.jpeg?width=800" 
+                                srcset="
+                                    ./assets/images/patagonia.jpeg?width=400 400w,
+                                    ./assets/images/patagonia.jpeg?width=800 800w
+                                "
+                                sizes="(max-width: 600px) 100vw, 33vw"
+                                alt="Patagonia" 
+                                class="card-image imagen-recortada"
+                                loading="lazy"
+                            >
                         <div class="card-content">
                             <h3 class="card-title">Patagonia, Argentina</h3>
                             <p class="card-description">Naturaleza salvaje, glaciares imponentes y paisajes de ensueño

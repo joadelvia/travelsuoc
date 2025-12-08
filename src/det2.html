@@ -8,6 +8,7 @@
     <meta name="description"
         content="Descubre Kyoto, el corazón cultural de Japón con templos milenarios y jardines zen.">
     <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
 </head>
 
 <body>
@@ -16,7 +17,12 @@
 
     <!-- Hero Image -->
     <div class="detail-hero">
-        <img src="assets/images/kyoto.jpeg" alt="Kyoto, Japón">
+        <picture>
+            <source srcset="assets/images/kyoto.jpeg?as=avif&width=1200" type="image/avif" media="(min-width: 768px)">
+            <source srcset="assets/images/kyoto.jpeg?as=webp&width=1200" type="image/webp" media="(min-width: 768px)">
+            <source srcset="assets/images/kyoto.jpeg?as=webp&width=600" type="image/webp" media="(max-width: 767px)">
+            <img src="assets/images/kyoto.jpeg?width=1200" alt="Kyoto, Japón">
+        </picture>
         <div class="detail-hero-overlay">
             <div class="detail-hero-content">
                 <div class="container">
@@ -74,9 +80,27 @@
 
                     <!-- Image Gallery -->
                     <div class="image-gallery">
-                        <img src="assets/images/templos_kyoto.jpeg" alt="Templos de Kyoto">
-                        <img src="assets/images/festividades_kyoto.jpeg" alt="Festivales tradicionales">
-                        <img src="assets/images/naturaleza_kyoto.jpeg" alt="Naturaleza en Kyoto">
+                        <img 
+                            src="assets/images/templos_kyoto.jpeg?width=400" 
+                            srcset="assets/images/templos_kyoto.jpeg?width=400 400w, assets/images/templos_kyoto.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Templos de Kyoto"
+                            loading="lazy"
+                        >
+                        <img 
+                            src="assets/images/festividades_kyoto.jpeg?width=400" 
+                            srcset="assets/images/festividades_kyoto.jpeg?width=400 400w, assets/images/festividades_kyoto.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Festividades tradicionales"
+                            loading="lazy"
+                        >
+                        <img 
+                            src="assets/images/naturaleza_kyoto.jpeg?width=400" 
+                            srcset="assets/images/naturaleza_kyoto.jpeg?width=400 400w, assets/images/naturaleza_kyoto.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Naturaleza en Kyoto"
+                            loading="lazy"
+                        >
                     </div>
 
                     <h2>Vídeo: Descubre los Templos Ocultos de Kyoto</h2>
@@ -133,21 +157,42 @@
                 <h2>Destinos Relacionados</h2>
                 <div class="grid grid-3">
                     <a href="/det1" class="card">
-                        <img src="assets/images/santorini.jpeg" alt="Santorini" class="card-image">
+                        <img 
+                            src="assets/images/santorini.jpeg?width=400" 
+                            srcset="assets/images/santorini.jpeg?width=400 400w, assets/images/santorini.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Santorini"
+                            loading="lazy"
+                            class="card-image"
+                        >
                         <div class="card-content">
                             <h3 class="card-title">Santorini, Grecia</h3>
                             <p class="card-description">Joya del Mediterráneo con vistas únicas</p>
                         </div>
                     </a>
                     <a href="/categoria" class="card">
-                        <img src="assets/images/bali.jpeg" alt="Bali" class="card-image">
+                        <img 
+                            src="assets/images/bali.jpeg?width=400" 
+                            srcset="assets/images/bali.jpeg?width=400 400w, assets/images/bali.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Bali"
+                            loading="lazy"
+                            class="card-image"
+                        >
                         <div class="card-content">
                             <h3 class="card-title">Bali, Indonesia</h3>
                             <p class="card-description">Isla de templos y playas paradisíacas</p>
                         </div>
                     </a>
                     <a href="/categoria" class="card">
-                        <img src="assets/images/patagonia.jpeg" alt="Patagonia" class="card-image">
+                        <img 
+                            src="assets/images/patagonia.jpeg?width=400" 
+                            srcset="assets/images/patagonia.jpeg?width=400 400w, assets/images/patagonia.jpeg?width=800 800w"
+                            sizes="(max-width: 600px) 100vw, 33vw"
+                            alt="Patagonia"
+                            loading="lazy"
+                            class="card-image"
+                        >
                         <div class="card-content">
                             <h3 class="card-title">Patagonia, Argentina</h3>
                             <p class="card-description">Naturaleza salvaje en el fin del mundo</p>
