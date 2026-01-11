@@ -22,7 +22,10 @@
             <source srcset="assets/images/santorini.jpeg?as=avif&width=1200" type="image/avif" media="(min-width: 768px)">
             <source srcset="assets/images/santorini.jpeg?as=webp&width=1200" type="image/webp" media="(min-width: 768px)">
             <source srcset="assets/images/santorini.jpeg?as=webp&width=600" type="image/webp" media="(max-width: 767px)">
-            <img src="assets/images/santorini.jpeg?width=1200" alt="Santorini, Grecia">
+            <img src="assets/images/santorini.jpeg?width=1200" alt="Santorini, Grecia" 
+                fetchpriority="high"
+                width="1200"
+                height="600">
         </picture>
         <div class="detail-hero-overlay">
             <div class="detail-hero-content">
@@ -73,35 +76,40 @@
 
                     <!-- Image Gallery -->
                     <div class="image-gallery">
-                        <img 
-                            src="assets/images/costa_tropical.jpeg?width=400" 
-                            srcset="assets/images/costa_tropical.jpeg?width=400 400w, assets/images/costa_tropical.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Playas de Santorini"
-                            loading="lazy"
-                        >
-                        <img 
-                            src="assets/images/gastronomia_griega.jpeg?width=400" 
-                            srcset="assets/images/gastronomia_griega.jpeg?width=400 400w, assets/images/gastronomia_griega.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Gastronomía griega"
-                            loading="lazy"
-                        >
-                        <img 
-                            src="assets/images/calles_santorini.jpeg?width=400" 
-                            srcset="assets/images/calles_santorini.jpeg?width=400 400w, assets/images/calles_santorini.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Calles de Santorini"
-                            loading="lazy"
-                        >
+                        <picture>
+                            <source srcset="assets/images/costa_tropical.jpeg?as=webp&width=400" type="image/webp">
+                            <img src="assets/images/costa_tropical.jpeg?width=400" alt="Playas de Santorini" loading="lazy" width="400" height="300">
+                        </picture>
+                        
+                        <picture>
+                            <source srcset="assets/images/gastronomia_griega.jpeg?as=webp&width=400" type="image/webp">
+                            <img src="assets/images/gastronomia_griega.jpeg?width=400" alt="Gastronomía griega" loading="lazy" width="400" height="300">
+                        </picture>
+                        
+                        <picture>
+                            <source srcset="assets/images/calles_santorini.jpeg?as=webp&width=400" type="image/webp">
+                            <img src="assets/images/calles_santorini.jpeg?width=400" alt="Calles de Santorini" loading="lazy" width="400" height="300">
+                        </picture>
                     </div>
 
                     <h2>Vídeo: Qué ver y hacer en Santorini</h2>
-                    <div class="video-container">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JRqHgyQ-LlE"
-                            title="Santorini Travel Guide"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background-color: #000;">
+                        
+                        <div class="video-facade" data-id="JRqHgyQ-LlE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+                            
+                            <img 
+                                src="https://img.youtube.com/vi/JRqHgyQ-LlE/maxresdefault.jpg" 
+                                alt="Ver vídeo de Santorini" 
+                                style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;"
+                                loading="lazy"
+                                width="800"
+                                height="450"
+                            >
+                            
+                            <div class="play-button" style="position: absolute; width: 68px; height: 48px; background-color: rgba(33,33,33,0.8); border-radius: 12px; display: flex; align-items: center; justify-content: center; z-index: 10;">
+                                <div style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 20px solid #fff;"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,6 +206,35 @@
     </main>
     <!-- Footer -->
     <include src="views/footer.html"></include>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const facades = document.querySelectorAll('.video-facade');
+            
+            facades.forEach(facade => {
+                facade.addEventListener('click', function() {
+                    const videoId = this.getAttribute('data-id');
+                    const parent = this.parentElement;
+                    
+                    // Crear el iframe real
+                    const iframe = document.createElement('iframe');
+                    iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+                    iframe.setAttribute('title', 'YouTube video player');
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                    iframe.setAttribute('allowfullscreen', '');
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '0';
+                    iframe.style.left = '0';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    
+                    // Reemplazar la fachada por el iframe
+                    parent.innerHTML = '';
+                    parent.appendChild(iframe);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
