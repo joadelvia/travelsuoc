@@ -21,7 +21,8 @@
             <source srcset="assets/images/kyoto.jpeg?as=avif&width=1200" type="image/avif" media="(min-width: 768px)">
             <source srcset="assets/images/kyoto.jpeg?as=webp&width=1200" type="image/webp" media="(min-width: 768px)">
             <source srcset="assets/images/kyoto.jpeg?as=webp&width=600" type="image/webp" media="(max-width: 767px)">
-            <img src="assets/images/kyoto.jpeg?width=1200" alt="Kyoto, Japón">
+            <img src="assets/images/kyoto.jpeg?width=1200" alt="Kyoto, Japón" fetchpriority="high" width="1200"
+                height="600">
         </picture>
         <div class="detail-hero-overlay">
             <div class="detail-hero-content">
@@ -80,35 +81,33 @@
 
                     <!-- Image Gallery -->
                     <div class="image-gallery">
-                        <img 
-                            src="assets/images/templos_kyoto.jpeg?width=400" 
-                            srcset="assets/images/templos_kyoto.jpeg?width=400 400w, assets/images/templos_kyoto.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Templos de Kyoto"
-                            loading="lazy"
-                        >
-                        <img 
-                            src="assets/images/festividades_kyoto.jpeg?width=400" 
-                            srcset="assets/images/festividades_kyoto.jpeg?width=400 400w, assets/images/festividades_kyoto.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Festividades tradicionales"
-                            loading="lazy"
-                        >
-                        <img 
-                            src="assets/images/naturaleza_kyoto.jpeg?width=400" 
-                            srcset="assets/images/naturaleza_kyoto.jpeg?width=400 400w, assets/images/naturaleza_kyoto.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Naturaleza en Kyoto"
-                            loading="lazy"
-                        >
+                        <picture>
+                            <source srcset="assets/images/templos_kyoto.jpeg?as=webp&width=400" type="image/webp">
+                            <img src="assets/images/templos_kyoto.jpeg?width=400" alt="Templos de Kyoto" loading="lazy"
+                                width="400" height="300">
+                        </picture>
+
+                        <picture>
+                            <source srcset="assets/images/festividades_kyoto.jpeg?as=webp&width=400" type="image/webp">
+                            <img src="assets/images/festividades_kyoto.jpeg?width=400" alt="Festivales tradicionales"
+                                loading="lazy" width="400" height="300">
+                        </picture>
+
+                        <picture>
+                            <source srcset="assets/images/naturaleza_kyoto.jpeg?as=webp&width=400" type="image/webp">
+                            <img src="assets/images/naturaleza_kyoto.jpeg?width=400" alt="Naturaleza en Kyoto"
+                                loading="lazy" width="400" height="300">
+                        </picture>
                     </div>
 
                     <h2>Vídeo: Descubre los Templos Ocultos de Kyoto</h2>
+
                     <div class="video-container">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/41Hqrdqkmr8"
-                            title="Kyoto Travel Guide"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <div class="video-facade" data-id="41Hqrdqkmr8">
+                            <img class="video-thumbnail" src="https://img.youtube.com/vi/41Hqrdqkmr8/maxresdefault.jpg"
+                                alt="Ver vídeo de Kyoto" loading="lazy" width="800" height="450">
+                            <button class="video-play-btn" aria-label="Reproducir vídeo"></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,42 +156,27 @@
                 <h2>Destinos Relacionados</h2>
                 <div class="grid grid-3">
                     <a href="/det1" class="card">
-                        <img 
-                            src="assets/images/santorini.jpeg?width=400" 
+                        <img src="assets/images/santorini.jpeg?width=400"
                             srcset="assets/images/santorini.jpeg?width=400 400w, assets/images/santorini.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Santorini"
-                            loading="lazy"
-                            class="card-image"
-                        >
+                            sizes="(max-width: 600px) 100vw, 33vw" alt="Santorini" loading="lazy" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Santorini, Grecia</h3>
                             <p class="card-description">Joya del Mediterráneo con vistas únicas</p>
                         </div>
                     </a>
                     <a href="/categoria" class="card">
-                        <img 
-                            src="assets/images/bali.jpeg?width=400" 
+                        <img src="assets/images/bali.jpeg?width=400"
                             srcset="assets/images/bali.jpeg?width=400 400w, assets/images/bali.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Bali"
-                            loading="lazy"
-                            class="card-image"
-                        >
+                            sizes="(max-width: 600px) 100vw, 33vw" alt="Bali" loading="lazy" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Bali, Indonesia</h3>
                             <p class="card-description">Isla de templos y playas paradisíacas</p>
                         </div>
                     </a>
                     <a href="/categoria" class="card">
-                        <img 
-                            src="assets/images/patagonia.jpeg?width=400" 
+                        <img src="assets/images/patagonia.jpeg?width=400"
                             srcset="assets/images/patagonia.jpeg?width=400 400w, assets/images/patagonia.jpeg?width=800 800w"
-                            sizes="(max-width: 600px) 100vw, 33vw"
-                            alt="Patagonia"
-                            loading="lazy"
-                            class="card-image"
-                        >
+                            sizes="(max-width: 600px) 100vw, 33vw" alt="Patagonia" loading="lazy" class="card-image">
                         <div class="card-content">
                             <h3 class="card-title">Patagonia, Argentina</h3>
                             <p class="card-description">Naturaleza salvaje en el fin del mundo</p>
@@ -204,6 +188,30 @@
     </main>
     <!-- Footer -->
     <include src="views/footer.html"></include>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const facades = document.querySelectorAll('.video-facade');
+
+            facades.forEach(facade => {
+                facade.addEventListener('click', function () {
+                    const videoId = this.getAttribute('data-id');
+                    const container = this.closest('.video-container');
+
+                    // Crear el iframe real
+                    const iframe = document.createElement('iframe');
+                    iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1`);
+                    iframe.setAttribute('title', 'YouTube video player');
+                    iframe.setAttribute('frameborder', '0');
+                    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                    iframe.setAttribute('allowfullscreen', '');
+
+                    // Limpiar la fachada e insertar el iframe
+                    container.innerHTML = '';
+                    container.appendChild(iframe);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
