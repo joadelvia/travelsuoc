@@ -498,39 +498,128 @@ footer {
 
 /* 1. Animación SVG (Flotar) */
 @keyframes flotar {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .icono-animado {
-    /* Aplica la animación: nombre, duración, curva, infinito */
-    animation: flotar 3s ease-in-out infinite;
-    display: inline-block; /* Necesario para que transform funcione en algunos elementos */
+  /* Aplica la animación: nombre, duración, curva, infinito */
+  animation: flotar 3s ease-in-out infinite;
+  display: inline-block;
+  /* Necesario para que transform funcione en algunos elementos */
 }
 
 /* 2. Clip-path (Recorte creativo) */
 .imagen-recortada {
-    /* Forma de heptágono (puedes cambiarlo en clippy) */
-    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
-    transition: clip-path 0.5s ease; /* Transición suave si cambia */
+  /* Forma de heptágono (puedes cambiarlo en clippy) */
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  transition: clip-path 0.5s ease;
+  /* Transición suave si cambia */
 }
 
 /* Efecto opcional: al pasar el ratón recupera la forma cuadrada */
 .imagen-recortada:hover {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Ajuste para que las imágenes responsive no se rompan */
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Accesibilidad: desactiva animaciones automáticamente si el usuario lo solicita en su SO */
 @media (prefers-reduced-motion: reduce) {
-    .icono-animado, .imagen-recortada, * {
-        animation: none !important;
-        transition: none !important;
-    }
+
+  .icono-animado,
+  .imagen-recortada,
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* --- Estilos para la Fachada de YouTube --- */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Mantiene la proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    background-color: #000;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.video-facade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.video-facade:hover .video-thumbnail {
+    opacity: 1;
+}
+
+/* Botón de Play estilo YouTube */
+.video-play-btn {
+    position: absolute;
+    width: 68px;
+    height: 48px;
+    background-color: rgba(33, 33, 33, 0.8);
+    border: none;
+    border-radius: 12px;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Triángulo del Play */
+.video-play-btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 20px;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+.video-facade:hover .video-play-btn {
+    background-color: #f00; /* Rojo YouTube al pasar el ratón */
+}
+
+/* Estilos para el iframe inyectado (por si acaso) */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
