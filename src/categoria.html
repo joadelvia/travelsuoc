@@ -30,17 +30,16 @@
                     <!-- Santorini - enlaza a /det1 -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img 
-                                src="./assets/images/santorini.jpeg?width=800" 
-                                srcset="
-                                    ./assets/images/santorini.jpeg?width=400 400w,
-                                    ./assets/images/santorini.jpeg?width=800 800w
-                            " 
-                            sizes="(max-width: 600px) 100vw, 33vw" 
-                            alt="Santorini" 
-                            class="card-image" 
-                            loading="lazy"
-                            >
+                            <picture>
+                                <source srcset="./assets/images/santorini.jpeg?as=webp&width=400 400w, ./assets/images/santorini.jpeg?as=webp&width=800 800w" 
+                                        type="image/webp" 
+                                        sizes="(max-width: 600px) 100vw, 33vw">
+                                <img src="./assets/images/santorini.jpeg?width=800" 
+                                    srcset="./assets/images/santorini.jpeg?width=400 400w, ./assets/images/santorini.jpeg?width=800 800w" 
+                                    sizes="(max-width: 600px) 100vw, 33vw" alt="Santorini" class="card-image"
+                                    fetchpriority="high">
+                            </picture>
+
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Santorini, Grecia</h3>
@@ -54,41 +53,35 @@
                     <!-- Kyoto - enlaza a /det2 -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img 
-                                src="./assets/images/kyoto.jpeg?width=800" 
-                                srcset="
-                                    ./assets/images/kyoto.jpeg?width=400 400w,
-                                    ./assets/images/kyoto.jpeg?width=800 800w
-                                "
-                                sizes="(max-width: 600px) 100vw, 33vw"
-                                alt="Kyoto" 
-                                class="card-image"
-                                loading="lazy"
-                            >
+                            <picture>
+                                <source
+                                    srcset="./assets/images/kyoto.jpeg?as=webp&width=400 400w, ./assets/images/kyoto.jpeg?as=webp&width=800 800w"
+                                    type="image/webp" sizes="(max-width: 600px) 100vw, 33vw">
+                                <img src="./assets/images/kyoto.jpeg?width=800"
+                                    srcset="./assets/images/kyoto.jpeg?width=400 400w, ./assets/images/kyoto.jpeg?width=800 800w"
+                                    sizes="(max-width: 600px) 100vw, 33vw" alt="Kyoto" class="card-image" loading="lazy"
+                                    width="800" height="533">
+                            </picture>
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Kyoto, Japón</h3>
                             <p class="card-description">Ciudad milenaria con templos sagrados, jardines zen y
-                                tradiciones
-                                ancestrales</p>
+                                tradiciones ancestrales</p>
                             <a href="/det2" class="btn btn-primary">Ver Detalles</a>
                         </div>
                     </div>
 
-                    <!-- Bali -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img 
-                                src="./assets/images/bali.jpeg?width=800" 
-                                srcset="
-                                    ./assets/images/bali.jpeg?width=400 400w,
-                                    ./assets/images/bali.jpeg?width=800 800w
-                                "
-                                sizes="(max-width: 600px) 100vw, 33vw"
-                                alt="Bali" 
-                                class="card-image"
-                                loading="lazy"
-                            >
+                            <picture>
+                                <source
+                                    srcset="./assets/images/bali.jpeg?as=webp&width=400 400w, ./assets/images/bali.jpeg?as=webp&width=800 800w"
+                                    type="image/webp" sizes="(max-width: 600px) 100vw, 33vw">
+                                <img src="./assets/images/bali.jpeg?width=800"
+                                    srcset="./assets/images/bali.jpeg?width=400 400w, ./assets/images/bali.jpeg?width=800 800w"
+                                    sizes="(max-width: 600px) 100vw, 33vw" alt="Bali" class="card-image" loading="lazy"
+                                    width="800" height="533">
+                            </picture>
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Bali, Indonesia</h3>
@@ -98,44 +91,37 @@
                         </div>
                     </div>
 
-                    <!-- Patagonia -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img 
-                                src="./assets/images/patagonia.jpeg?width=800" 
-                                srcset="
-                                    ./assets/images/patagonia.jpeg?width=400 400w,
-                                    ./assets/images/patagonia.jpeg?width=800 800w
-                                "
-                                sizes="(max-width: 600px) 100vw, 33vw"
-                                alt="Patagonia" 
-                                class="card-image"
-                                loading="lazy"
-                            >
+                            <picture>
+                                <source
+                                    srcset="./assets/images/patagonia.jpeg?as=webp&width=400 400w, ./assets/images/patagonia.jpeg?as=webp&width=800 800w"
+                                    type="image/webp" sizes="(max-width: 600px) 100vw, 33vw">
+                                <img src="./assets/images/patagonia.jpeg?width=800"
+                                    srcset="./assets/images/patagonia.jpeg?width=400 400w, ./assets/images/patagonia.jpeg?width=800 800w"
+                                    sizes="(max-width: 600px) 100vw, 33vw" alt="Patagonia" class="card-image"
+                                    loading="lazy" width="800" height="533">
+                            </picture>
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Patagonia, Argentina</h3>
                             <p class="card-description">Naturaleza salvaje con glaciares imponentes y paisajes de otro
-                                mundo
-                            </p>
+                                mundo</p>
                             <button class="btn btn-disabled">Próximamente</button>
                         </div>
                     </div>
 
-                    <!-- Machu Picchu -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img 
-                                src="./assets/images/machu_pichu.jpeg?width=800" 
-                                srcset="
-                                    ./assets/images/machu_pichu.jpeg?width=400 400w,
-                                    ./assets/images/machu_pichu.jpeg?width=800 800w
-                                "
-                                sizes="(max-width: 600px) 100vw, 33vw"
-                                alt="Machu Pichu" 
-                                class="card-image"
-                                loading="lazy"
-                            >
+                            <picture>
+                                <source
+                                    srcset="./assets/images/machu_pichu.jpeg?as=webp&width=400 400w, ./assets/images/machu_pichu.jpeg?as=webp&width=800 800w"
+                                    type="image/webp" sizes="(max-width: 600px) 100vw, 33vw">
+                                <img src="./assets/images/machu_pichu.jpeg?width=800"
+                                    srcset="./assets/images/machu_pichu.jpeg?width=400 400w, ./assets/images/machu_pichu.jpeg?width=800 800w"
+                                    sizes="(max-width: 600px) 100vw, 33vw" alt="Machu Picchu" class="card-image"
+                                    loading="lazy" width="800" height="533">
+                            </picture>
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Machu Picchu, Perú</h3>
@@ -145,20 +131,17 @@
                         </div>
                     </div>
 
-                    <!-- Costa Tropical -->
                     <div class="card">
                         <div style="position: relative;">
-                            <img 
-                                src="./assets/images/costa_tropical.jpeg?width=800" 
-                                srcset="
-                                    ./assets/images/costa_tropical.jpeg?width=400 400w,
-                                    ./assets/images/costa_tropical.jpeg?width=800 800w
-                                "
-                                sizes="(max-width: 600px) 100vw, 33vw"
-                                alt="Costa Tropical" 
-                                class="card-image"
-                                loading="lazy"
-                            >
+                            <picture>
+                                <source
+                                    srcset="./assets/images/costa_tropical.jpeg?as=webp&width=400 400w, ./assets/images/costa_tropical.jpeg?as=webp&width=800 800w"
+                                    type="image/webp" sizes="(max-width: 600px) 100vw, 33vw">
+                                <img src="./assets/images/costa_tropical.jpeg?width=800"
+                                    srcset="./assets/images/costa_tropical.jpeg?width=400 400w, ./assets/images/costa_tropical.jpeg?width=800 800w"
+                                    sizes="(max-width: 600px) 100vw, 33vw" alt="Costa Tropical" class="card-image"
+                                    loading="lazy" width="800" height="533">
+                            </picture>
                         </div>
                         <div class="card-content">
                             <h3 class="card-title">Costa Tropical</h3>
